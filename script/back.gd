@@ -2,7 +2,6 @@ extends Camera2D
 
 
 # Declare member variables here. Examples:
-#var
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
