@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://theme/Runlabel.tres" type="Theme" id=1]
+[ext_resource path="res://script/phoneConnect.gd" type="Script" id=2]
+[ext_resource path="res://data/image/QR.png" type="Texture" id=3]
+[ext_resource path="res://theme/mainButton.tres" type="Theme" id=4]
+
+[node name="phoneConnect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Qr" type="Sprite" parent="."]
+position = Vector2( 568, 248 )
+texture = ExtResource( 3 )
+
+[node name="one" type="Label" parent="."]
+margin_right = 1030.0
+margin_bottom = 117.0
+theme = ExtResource( 1 )
+text = "1.手机扫描二维码安装控制器"
+
+[node name="two" type="Label" parent="."]
+margin_top = 400.0
+margin_right = 1030.0
+margin_bottom = 517.0
+theme = ExtResource( 1 )
+text = "2.输入"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 104.0
+margin_top = 192.0
+margin_right = 262.0
+margin_bottom = 316.0
+theme = ExtResource( 4 )
+text = "网站"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=2]
+
+[ext_resource path="res://font/NotoSansSC-Medium.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=6]
+size = 80
+outline_size = 2
+outline_color = Color( 0.227451, 0.352941, 0.376471, 1 )
+font_data = ExtResource( 1 )
+
+[resource]
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color_shadow = Color( 0.341176, 0.639216, 0.780392, 1 )
+Label/colors/font_outline_modulate = Color( 0.290196, 0.870588, 0.796078, 1 )
+Label/constants/shadow_as_outline = 2
+Label/fonts/font = SubResource( 6 )

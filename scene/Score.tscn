@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://theme/mainButton.tres" type="Theme" id=1]
+[ext_resource path="res://theme/scoreLabel.tres" type="Theme" id=2]
+[ext_resource path="res://data/audio/click4.ogg" type="AudioStream" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.247059, 0.776471, 0.678431, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.129412, 0.184314, 0.176471, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Theme" id=10]
+Panel/styles/panel = SubResource( 1 )
+
+[node name="Score" type="CanvasLayer"]
+layer = 10
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -200.0
+margin_right = 250.0
+margin_bottom = 200.0
+theme = SubResource( 10 )
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = 60.0
+margin_right = 110.0
+margin_bottom = 184.0
+theme = ExtResource( 1 )
+text = "主菜单"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -188.0
+margin_right = 80.0
+margin_bottom = 50.0
+alignment = 1
+
+[node name="now" type="Label" parent="VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 117.0
+theme = ExtResource( 2 )
+text = "当前成绩："
+
+[node name="max" type="Label" parent="VBoxContainer"]
+margin_top = 121.0
+margin_right = 400.0
+margin_bottom = 238.0
+theme = ExtResource( 2 )
+text = "最佳成绩："
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

@@ -1,0 +1,898 @@
+[gd_scene load_steps=364 format=2]
+
+[ext_resource path="res://data/image/man-1838991_1280.jpg" type="Texture" id=1]
+[ext_resource path="res://data/image/swimmers-79592_1280.jpg" type="Texture" id=2]
+[ext_resource path="res://data/image/table-tennis-1807603_1280.jpg" type="Texture" id=3]
+[ext_resource path="res://theme/mainButton.tres" type="Theme" id=4]
+[ext_resource path="res://data/audio/click4.ogg" type="AudioStream" id=5]
+[ext_resource path="res://script/gameSelect.gd" type="Script" id=6]
+[ext_resource path="res://data/image/playGround.jpg" type="Texture" id=7]
+[ext_resource path="res://data/music/MusMus-BGM-056.mp3" type="AudioStream" id=8]
+[ext_resource path="res://theme/MainSceneLabel.tres" type="Theme" id=9]
+[ext_resource path="res://data/image/char/Slobber/512(2)_4.png" type="Texture" id=10]
+[ext_resource path="res://data/image/char/Slobber/512(2)_9.png" type="Texture" id=11]
+[ext_resource path="res://data/image/char/Slobber/512(2)_10.png" type="Texture" id=12]
+[ext_resource path="res://data/image/char/Slobber/512(2)_45.png" type="Texture" id=13]
+[ext_resource path="res://data/image/char/Slobber/512(2)_5.png" type="Texture" id=14]
+[ext_resource path="res://data/image/char/Slobber/512(2)_30.png" type="Texture" id=15]
+[ext_resource path="res://data/image/char/Slobber/512(2)_24.png" type="Texture" id=16]
+[ext_resource path="res://data/image/char/Slobber/512(2)_29.png" type="Texture" id=17]
+[ext_resource path="res://data/image/char/Slobber/512(2)_47.png" type="Texture" id=18]
+[ext_resource path="res://data/image/char/Slobber/512(2)_48.png" type="Texture" id=19]
+[ext_resource path="res://data/image/char/Slobber/512(2)_49.png" type="Texture" id=20]
+[ext_resource path="res://data/image/char/Slobber/512(2)_13.png" type="Texture" id=21]
+[ext_resource path="res://data/image/char/Slobber/512(2)_53.png" type="Texture" id=22]
+[ext_resource path="res://data/image/char/Slobber/512(2)_17.png" type="Texture" id=23]
+[ext_resource path="res://data/image/char/Slobber/512(2)_18.png" type="Texture" id=24]
+[ext_resource path="res://data/image/char/Slobber/512(2)_35.png" type="Texture" id=25]
+[ext_resource path="res://data/image/char/Slobber/512(2)_28.png" type="Texture" id=26]
+[ext_resource path="res://data/image/char/Slobber/512(2)_51.png" type="Texture" id=27]
+[ext_resource path="res://data/image/char/Slobber/512(2)_52.png" type="Texture" id=28]
+[ext_resource path="res://data/image/char/Slobber/512(2)_38.png" type="Texture" id=29]
+[ext_resource path="res://data/image/char/Slobber/512(2)_6.png" type="Texture" id=30]
+[ext_resource path="res://data/image/char/Slobber/512(2)_50.png" type="Texture" id=31]
+[ext_resource path="res://data/image/char/Slobber/512(2)_7.png" type="Texture" id=32]
+[ext_resource path="res://data/image/char/Slobber/512(2)_15.png" type="Texture" id=33]
+[ext_resource path="res://data/image/char/Slobber/512(2)_19.png" type="Texture" id=34]
+[ext_resource path="res://data/image/char/Slobber/512(2)_25.png" type="Texture" id=35]
+[ext_resource path="res://data/image/char/Slobber/512(2)_2.png" type="Texture" id=36]
+[ext_resource path="res://data/image/char/Slobber/512(2)_23.png" type="Texture" id=37]
+[ext_resource path="res://data/image/char/Slobber/512(2)_31.png" type="Texture" id=38]
+[ext_resource path="res://data/image/char/Slobber/512(2)_8.png" type="Texture" id=39]
+[ext_resource path="res://data/image/char/Slobber/512(2)_21.png" type="Texture" id=40]
+[ext_resource path="res://data/image/char/Slobber/512(2)_32.png" type="Texture" id=41]
+[ext_resource path="res://data/image/char/Slobber/512(2)_22.png" type="Texture" id=42]
+[ext_resource path="res://data/image/char/Slobber/512(2)_39.png" type="Texture" id=43]
+[ext_resource path="res://data/image/char/Slobber/512(2)_1.png" type="Texture" id=44]
+[ext_resource path="res://data/image/char/Slobber/512(2)_16.png" type="Texture" id=45]
+[ext_resource path="res://data/image/char/Slobber/512(2)_0.png" type="Texture" id=46]
+[ext_resource path="res://data/image/char/Slobber/512(2)_11.png" type="Texture" id=47]
+[ext_resource path="res://data/image/char/Slobber/512(2)_37.png" type="Texture" id=48]
+[ext_resource path="res://data/image/char/Slobber/512(2)_27.png" type="Texture" id=49]
+[ext_resource path="res://data/image/char/Slobber/512(2)_40.png" type="Texture" id=50]
+[ext_resource path="res://data/image/char/Slobber/512(2)_41.png" type="Texture" id=51]
+[ext_resource path="res://data/image/char/Slobber/512(2)_42.png" type="Texture" id=52]
+[ext_resource path="res://data/image/char/Slobber/512(2)_26.png" type="Texture" id=53]
+[ext_resource path="res://data/image/char/Slobber/512(2)_43.png" type="Texture" id=54]
+[ext_resource path="res://data/image/char/Slobber/512(2)_3.png" type="Texture" id=55]
+[ext_resource path="res://data/image/char/Slobber/512(2)_12.png" type="Texture" id=56]
+[ext_resource path="res://data/image/char/Slobber/512(2)_33.png" type="Texture" id=57]
+[ext_resource path="res://data/image/char/Slobber/512(2)_14.png" type="Texture" id=58]
+[ext_resource path="res://data/image/char/Slobber/512(2)_34.png" type="Texture" id=59]
+[ext_resource path="res://data/image/char/Slobber/512(2)_36.png" type="Texture" id=60]
+[ext_resource path="res://data/image/char/Slobber/512(2)_44.png" type="Texture" id=61]
+[ext_resource path="res://data/image/char/Slobber/512(2)_20.png" type="Texture" id=62]
+[ext_resource path="res://data/image/char/Slobber/512(2)_46.png" type="Texture" id=63]
+[ext_resource path="res://data/image/char/Slobber/512(2)_55.png" type="Texture" id=64]
+[ext_resource path="res://data/image/char/Slobber/512(2)_59.png" type="Texture" id=65]
+[ext_resource path="res://data/image/char/Slobber/512(2)_57.png" type="Texture" id=66]
+[ext_resource path="res://data/image/char/Slobber/512(2)_58.png" type="Texture" id=67]
+[ext_resource path="res://data/image/char/Slobber/512(2)_54.png" type="Texture" id=68]
+[ext_resource path="res://data/image/char/Slobber/512(2)_56.png" type="Texture" id=69]
+[ext_resource path="res://data/image/char/Slobber/512(2)_63.png" type="Texture" id=70]
+[ext_resource path="res://data/image/char/Slobber/512(2)_64.png" type="Texture" id=71]
+[ext_resource path="res://data/image/char/Slobber/512(2)_61.png" type="Texture" id=72]
+[ext_resource path="res://data/image/char/Slobber/512(2)_62.png" type="Texture" id=73]
+[ext_resource path="res://data/image/char/Slobber/512(2)_60.png" type="Texture" id=74]
+[ext_resource path="res://data/image/char/snails/512_45.png" type="Texture" id=75]
+[ext_resource path="res://data/image/char/angry/angry_29.png" type="Texture" id=76]
+[ext_resource path="res://data/image/char/snails/512_19.png" type="Texture" id=77]
+[ext_resource path="res://data/image/char/snails/512_20.png" type="Texture" id=78]
+[ext_resource path="res://data/image/char/snails/512_21.png" type="Texture" id=79]
+[ext_resource path="res://data/image/char/snails/512_22.png" type="Texture" id=80]
+[ext_resource path="res://data/image/char/snails/512_23.png" type="Texture" id=81]
+[ext_resource path="res://data/image/char/snails/512_5.png" type="Texture" id=82]
+[ext_resource path="res://data/image/char/snails/512_24.png" type="Texture" id=83]
+[ext_resource path="res://data/image/char/snails/512_25.png" type="Texture" id=84]
+[ext_resource path="res://data/image/char/hot/512(4)_41.png" type="Texture" id=85]
+[ext_resource path="res://data/image/char/snails/512_26.png" type="Texture" id=86]
+[ext_resource path="res://data/image/char/snails/512_16.png" type="Texture" id=87]
+[ext_resource path="res://data/image/char/snails/512_27.png" type="Texture" id=88]
+[ext_resource path="res://data/image/char/snails/512_15.png" type="Texture" id=89]
+[ext_resource path="res://data/image/char/snails/512_28.png" type="Texture" id=90]
+[ext_resource path="res://data/image/char/snails/512_29.png" type="Texture" id=91]
+[ext_resource path="res://data/image/char/snails/512_2.png" type="Texture" id=92]
+[ext_resource path="res://data/image/char/snails/512_30.png" type="Texture" id=93]
+[ext_resource path="res://data/image/char/snails/512_9.png" type="Texture" id=94]
+[ext_resource path="res://data/image/char/snails/512_12.png" type="Texture" id=95]
+[ext_resource path="res://data/image/char/hot/512(4)_14.png" type="Texture" id=96]
+[ext_resource path="res://data/image/char/hot/512(4)_22.png" type="Texture" id=97]
+[ext_resource path="res://data/image/char/hot/512(4)_24.png" type="Texture" id=98]
+[ext_resource path="res://data/image/char/snails/512_3.png" type="Texture" id=99]
+[ext_resource path="res://data/image/char/hot/512(4)_25.png" type="Texture" id=100]
+[ext_resource path="res://data/image/char/hot/512(4)_21.png" type="Texture" id=101]
+[ext_resource path="res://data/image/char/snails/512_0.png" type="Texture" id=102]
+[ext_resource path="res://data/image/char/hot/512(4)_3.png" type="Texture" id=103]
+[ext_resource path="res://data/image/char/hot/512(4)_5.png" type="Texture" id=104]
+[ext_resource path="res://data/image/char/snails/512_7.png" type="Texture" id=105]
+[ext_resource path="res://data/image/char/hot/512(4)_7.png" type="Texture" id=106]
+[ext_resource path="res://data/image/char/hot/512(4)_12.png" type="Texture" id=107]
+[ext_resource path="res://data/image/char/hot/512(4)_13.png" type="Texture" id=108]
+[ext_resource path="res://data/image/char/hot/512(4)_19.png" type="Texture" id=109]
+[ext_resource path="res://data/image/char/hot/512(4)_18.png" type="Texture" id=110]
+[ext_resource path="res://data/image/char/hot/512(4)_16.png" type="Texture" id=111]
+[ext_resource path="res://data/image/char/hot/512(4)_9.png" type="Texture" id=112]
+[ext_resource path="res://data/image/char/hot/512(4)_17.png" type="Texture" id=113]
+[ext_resource path="res://data/image/char/hot/512(4)_20.png" type="Texture" id=114]
+[ext_resource path="res://data/image/char/hot/512(4)_23.png" type="Texture" id=115]
+[ext_resource path="res://data/image/char/snails/512_4.png" type="Texture" id=116]
+[ext_resource path="res://data/image/char/snails/512_6.png" type="Texture" id=117]
+[ext_resource path="res://data/image/char/snails/512_8.png" type="Texture" id=118]
+[ext_resource path="res://data/image/char/snails/512_11.png" type="Texture" id=119]
+[ext_resource path="res://data/image/char/snails/512_17.png" type="Texture" id=120]
+[ext_resource path="res://data/image/char/snails/512_10.png" type="Texture" id=121]
+[ext_resource path="res://data/image/char/snails/512_13.png" type="Texture" id=122]
+[ext_resource path="res://data/image/char/snails/512_1.png" type="Texture" id=123]
+[ext_resource path="res://data/image/char/snails/512_14.png" type="Texture" id=124]
+[ext_resource path="res://data/image/char/snails/512_18.png" type="Texture" id=125]
+[ext_resource path="res://data/image/char/hot/512(4)_15.png" type="Texture" id=126]
+[ext_resource path="res://data/image/char/hot/512(4)_0.png" type="Texture" id=127]
+[ext_resource path="res://data/image/char/hot/512(4)_26.png" type="Texture" id=128]
+[ext_resource path="res://data/image/char/hot/512(4)_27.png" type="Texture" id=129]
+[ext_resource path="res://data/image/char/hot/512(4)_8.png" type="Texture" id=130]
+[ext_resource path="res://data/image/char/stupid/512(3)_19.png" type="Texture" id=131]
+[ext_resource path="res://data/image/char/angry/angry_17.png" type="Texture" id=132]
+[ext_resource path="res://data/image/char/hot/512(4)_39.png" type="Texture" id=133]
+[ext_resource path="res://data/image/char/hot/512(4)_30.png" type="Texture" id=134]
+[ext_resource path="res://data/image/char/stupid/512(3)_35.png" type="Texture" id=135]
+[ext_resource path="res://data/image/char/stupid/512(3)_25.png" type="Texture" id=136]
+[ext_resource path="res://data/image/char/stupid/512(3)_15.png" type="Texture" id=137]
+[ext_resource path="res://data/image/char/hot/512(4)_1.png" type="Texture" id=138]
+[ext_resource path="res://data/image/char/hot/512(4)_28.png" type="Texture" id=139]
+[ext_resource path="res://data/image/char/snails/512_37.png" type="Texture" id=140]
+[ext_resource path="res://data/image/char/snails/512_38.png" type="Texture" id=141]
+[ext_resource path="res://data/image/char/hot/512(4)_2.png" type="Texture" id=142]
+[ext_resource path="res://data/image/char/snails/512_39.png" type="Texture" id=143]
+[ext_resource path="res://data/image/char/stupid/512(3)_30.png" type="Texture" id=144]
+[ext_resource path="res://data/image/char/hot/512(4)_11.png" type="Texture" id=145]
+[ext_resource path="res://data/image/char/hot/512(4)_29.png" type="Texture" id=146]
+[ext_resource path="res://data/image/char/hot/512(4)_40.png" type="Texture" id=147]
+[ext_resource path="res://data/image/char/snails/512_32.png" type="Texture" id=148]
+[ext_resource path="res://data/image/char/angry/angry_23.png" type="Texture" id=149]
+[ext_resource path="res://data/image/char/hot/512(4)_4.png" type="Texture" id=150]
+[ext_resource path="res://data/image/char/hot/512(4)_34.png" type="Texture" id=151]
+[ext_resource path="res://data/image/char/hot/512(4)_31.png" type="Texture" id=152]
+[ext_resource path="res://data/image/char/hot/512(4)_36.png" type="Texture" id=153]
+[ext_resource path="res://data/image/char/snails/512_34.png" type="Texture" id=154]
+[ext_resource path="res://data/image/char/snails/512_33.png" type="Texture" id=155]
+[ext_resource path="res://data/image/char/hot/512(4)_32.png" type="Texture" id=156]
+[ext_resource path="res://data/image/char/stupid/512(3)_16.png" type="Texture" id=157]
+[ext_resource path="res://data/image/char/stupid/512(3)_3.png" type="Texture" id=158]
+[ext_resource path="res://data/image/char/hot/512(4)_10.png" type="Texture" id=159]
+[ext_resource path="res://data/image/char/stupid/512(3)_11.png" type="Texture" id=160]
+[ext_resource path="res://data/image/char/stupid/512(3)_37.png" type="Texture" id=161]
+[ext_resource path="res://data/image/char/stupid/512(3)_53.png" type="Texture" id=162]
+[ext_resource path="res://data/image/char/stupid/512(3)_51.png" type="Texture" id=163]
+[ext_resource path="res://data/image/char/hot/512(4)_38.png" type="Texture" id=164]
+[ext_resource path="res://data/image/char/angry/angry_24.png" type="Texture" id=165]
+[ext_resource path="res://data/image/char/angry/angry_27.png" type="Texture" id=166]
+[ext_resource path="res://data/image/char/stupid/512(3)_39.png" type="Texture" id=167]
+[ext_resource path="res://data/image/char/snails/512_35.png" type="Texture" id=168]
+[ext_resource path="res://data/image/char/snails/512_36.png" type="Texture" id=169]
+[ext_resource path="res://data/image/char/hot/512(4)_35.png" type="Texture" id=170]
+[ext_resource path="res://data/image/char/angry/angry_10.png" type="Texture" id=171]
+[ext_resource path="res://data/image/char/stupid/512(3)_44.png" type="Texture" id=172]
+[ext_resource path="res://data/image/char/stupid/512(3)_21.png" type="Texture" id=173]
+[ext_resource path="res://data/image/char/stupid/512(3)_49.png" type="Texture" id=174]
+[ext_resource path="res://data/image/char/stupid/512(3)_31.png" type="Texture" id=175]
+[ext_resource path="res://data/image/char/angry/angry_30.png" type="Texture" id=176]
+[ext_resource path="res://data/image/char/stupid/512(3)_38.png" type="Texture" id=177]
+[ext_resource path="res://data/image/char/hot/512(4)_33.png" type="Texture" id=178]
+[ext_resource path="res://data/image/char/hot/512(4)_6.png" type="Texture" id=179]
+[ext_resource path="res://data/image/char/stupid/512(3)_0.png" type="Texture" id=180]
+[ext_resource path="res://data/image/char/snails/512_31.png" type="Texture" id=181]
+[ext_resource path="res://data/image/char/hot/512(4)_37.png" type="Texture" id=182]
+[ext_resource path="res://data/image/char/stupid/512(3)_52.png" type="Texture" id=183]
+[ext_resource path="res://data/image/char/stupid/512(3)_12.png" type="Texture" id=184]
+[ext_resource path="res://data/image/char/angry/angry_39.png" type="Texture" id=185]
+[ext_resource path="res://data/image/char/stupid/512(3)_33.png" type="Texture" id=186]
+[ext_resource path="res://data/image/char/angry/angry_18.png" type="Texture" id=187]
+[ext_resource path="res://data/image/char/stupid/512(3)_9.png" type="Texture" id=188]
+[ext_resource path="res://data/image/char/stupid/512(3)_22.png" type="Texture" id=189]
+[ext_resource path="res://data/image/char/stupid/512(3)_29.png" type="Texture" id=190]
+[ext_resource path="res://data/image/char/stupid/512(3)_8.png" type="Texture" id=191]
+[ext_resource path="res://data/image/char/stupid/512(3)_40.png" type="Texture" id=192]
+[ext_resource path="res://data/image/char/angry/angry_13.png" type="Texture" id=193]
+[ext_resource path="res://data/image/char/angry/angry_4.png" type="Texture" id=194]
+[ext_resource path="res://data/image/char/angry/angry_3.png" type="Texture" id=195]
+[ext_resource path="res://data/image/char/stupid/512(3)_36.png" type="Texture" id=196]
+[ext_resource path="res://data/image/char/stupid/512(3)_41.png" type="Texture" id=197]
+[ext_resource path="res://data/image/char/stupid/512(3)_24.png" type="Texture" id=198]
+[ext_resource path="res://data/image/char/stupid/512(3)_45.png" type="Texture" id=199]
+[ext_resource path="res://data/image/char/angry/angry_16.png" type="Texture" id=200]
+[ext_resource path="res://data/image/char/angry/angry_34.png" type="Texture" id=201]
+[ext_resource path="res://data/image/char/stupid/512(3)_6.png" type="Texture" id=202]
+[ext_resource path="res://data/image/char/stupid/512(3)_34.png" type="Texture" id=203]
+[ext_resource path="res://data/image/char/angry/angry_7.png" type="Texture" id=204]
+[ext_resource path="res://data/image/char/angry/angry_8.png" type="Texture" id=205]
+[ext_resource path="res://data/image/char/snails/512_40.png" type="Texture" id=206]
+[ext_resource path="res://data/image/char/snails/512_44.png" type="Texture" id=207]
+[ext_resource path="res://data/image/char/stupid/512(3)_14.png" type="Texture" id=208]
+[ext_resource path="res://data/image/char/snails/512_41.png" type="Texture" id=209]
+[ext_resource path="res://data/image/char/stupid/512(3)_20.png" type="Texture" id=210]
+[ext_resource path="res://data/image/char/stupid/512(3)_47.png" type="Texture" id=211]
+[ext_resource path="res://data/image/char/stupid/512(3)_17.png" type="Texture" id=212]
+[ext_resource path="res://data/image/char/stupid/512(3)_2.png" type="Texture" id=213]
+[ext_resource path="res://data/image/char/stupid/512(3)_18.png" type="Texture" id=214]
+[ext_resource path="res://data/image/char/angry/angry_20.png" type="Texture" id=215]
+[ext_resource path="res://data/image/char/stupid/512(3)_42.png" type="Texture" id=216]
+[ext_resource path="res://data/image/char/stupid/512(3)_46.png" type="Texture" id=217]
+[ext_resource path="res://data/image/char/stupid/512(3)_32.png" type="Texture" id=218]
+[ext_resource path="res://data/image/char/stupid/512(3)_27.png" type="Texture" id=219]
+[ext_resource path="res://data/image/char/angry/angry_6.png" type="Texture" id=220]
+[ext_resource path="res://data/image/char/stupid/512(3)_54.png" type="Texture" id=221]
+[ext_resource path="res://data/image/char/stupid/512(3)_43.png" type="Texture" id=222]
+[ext_resource path="res://data/image/char/angry/angry_2.png" type="Texture" id=223]
+[ext_resource path="res://data/image/char/angry/angry_9.png" type="Texture" id=224]
+[ext_resource path="res://data/image/char/angry/angry_28.png" type="Texture" id=225]
+[ext_resource path="res://data/image/char/stupid/512(3)_48.png" type="Texture" id=226]
+[ext_resource path="res://data/image/char/angry/angry_40.png" type="Texture" id=227]
+[ext_resource path="res://data/image/char/stupid/512(3)_4.png" type="Texture" id=228]
+[ext_resource path="res://data/image/char/stupid/512(3)_5.png" type="Texture" id=229]
+[ext_resource path="res://data/image/char/stupid/512(3)_23.png" type="Texture" id=230]
+[ext_resource path="res://data/image/char/stupid/512(3)_13.png" type="Texture" id=231]
+[ext_resource path="res://data/image/char/stupid/512(3)_1.png" type="Texture" id=232]
+[ext_resource path="res://data/image/char/angry/angry_5.png" type="Texture" id=233]
+[ext_resource path="res://data/image/char/snails/512_43.png" type="Texture" id=234]
+[ext_resource path="res://data/image/char/angry/angry_35.png" type="Texture" id=235]
+[ext_resource path="res://data/image/char/stupid/512(3)_10.png" type="Texture" id=236]
+[ext_resource path="res://data/image/char/stupid/512(3)_50.png" type="Texture" id=237]
+[ext_resource path="res://data/image/char/angry/angry_37.png" type="Texture" id=238]
+[ext_resource path="res://data/image/char/stupid/512(3)_7.png" type="Texture" id=239]
+[ext_resource path="res://data/image/char/stupid/512(3)_26.png" type="Texture" id=240]
+[ext_resource path="res://data/image/char/angry/angry_38.png" type="Texture" id=241]
+[ext_resource path="res://data/image/char/angry/angry_0.png" type="Texture" id=242]
+[ext_resource path="res://data/image/char/snails/512_42.png" type="Texture" id=243]
+[ext_resource path="res://data/image/char/angry/angry_36.png" type="Texture" id=244]
+[ext_resource path="res://data/image/char/angry/angry_1.png" type="Texture" id=245]
+[ext_resource path="res://data/image/char/stupid/512(3)_28.png" type="Texture" id=246]
+[ext_resource path="res://data/image/char/angry/angry_22.png" type="Texture" id=247]
+[ext_resource path="res://data/image/char/angry/angry_32.png" type="Texture" id=248]
+[ext_resource path="res://data/image/char/angry/angry_21.png" type="Texture" id=249]
+[ext_resource path="res://data/image/char/angry/angry_26.png" type="Texture" id=250]
+[ext_resource path="res://data/image/char/angry/angry_25.png" type="Texture" id=251]
+[ext_resource path="res://data/image/char/angry/angry_14.png" type="Texture" id=252]
+[ext_resource path="res://data/image/char/angry/angry_19.png" type="Texture" id=253]
+[ext_resource path="res://data/image/char/angry/angry_12.png" type="Texture" id=254]
+[ext_resource path="res://data/image/char/angry/angry_15.png" type="Texture" id=255]
+[ext_resource path="res://data/image/char/angry/angry_33.png" type="Texture" id=256]
+[ext_resource path="res://data/image/char/angry/angry_31.png" type="Texture" id=257]
+[ext_resource path="res://data/image/char/angry/angry_11.png" type="Texture" id=258]
+[ext_resource path="res://data/image/char/snails/512_50.png" type="Texture" id=259]
+[ext_resource path="res://data/image/char/snails/512_58.png" type="Texture" id=260]
+[ext_resource path="res://data/image/char/snails/512_51.png" type="Texture" id=261]
+[ext_resource path="res://data/image/char/snails/512_66.png" type="Texture" id=262]
+[ext_resource path="res://data/image/char/snails/512_70.png" type="Texture" id=263]
+[ext_resource path="res://data/image/char/snails/512_71.png" type="Texture" id=264]
+[ext_resource path="res://data/image/char/snails/512_49.png" type="Texture" id=265]
+[ext_resource path="res://data/image/char/snails/512_46.png" type="Texture" id=266]
+[ext_resource path="res://data/image/char/snails/512_77.png" type="Texture" id=267]
+[ext_resource path="res://data/image/char/snails/512_62.png" type="Texture" id=268]
+[ext_resource path="res://data/image/char/snails/512_80.png" type="Texture" id=269]
+[ext_resource path="res://data/image/char/snails/512_74.png" type="Texture" id=270]
+[ext_resource path="res://data/image/char/snails/512_69.png" type="Texture" id=271]
+[ext_resource path="res://data/image/char/snails/512_47.png" type="Texture" id=272]
+[ext_resource path="res://data/image/char/snails/512_60.png" type="Texture" id=273]
+[ext_resource path="res://data/image/char/snails/512_53.png" type="Texture" id=274]
+[ext_resource path="res://data/image/char/snails/512_75.png" type="Texture" id=275]
+[ext_resource path="res://data/image/char/snails/512_52.png" type="Texture" id=276]
+[ext_resource path="res://data/image/char/snails/512_56.png" type="Texture" id=277]
+[ext_resource path="res://data/image/char/snails/512_67.png" type="Texture" id=278]
+[ext_resource path="res://data/image/char/snails/512_55.png" type="Texture" id=279]
+[ext_resource path="res://data/image/char/snails/512_63.png" type="Texture" id=280]
+[ext_resource path="res://data/image/char/snails/512_57.png" type="Texture" id=281]
+[ext_resource path="res://data/image/char/snails/512_76.png" type="Texture" id=282]
+[ext_resource path="res://data/image/char/snails/512_78.png" type="Texture" id=283]
+[ext_resource path="res://data/image/char/snails/512_59.png" type="Texture" id=284]
+[ext_resource path="res://data/image/char/snails/512_72.png" type="Texture" id=285]
+[ext_resource path="res://data/image/char/snails/512_64.png" type="Texture" id=286]
+[ext_resource path="res://data/image/char/snails/512_79.png" type="Texture" id=287]
+[ext_resource path="res://data/image/char/snails/512_54.png" type="Texture" id=288]
+[ext_resource path="res://data/image/char/snails/512_65.png" type="Texture" id=289]
+[ext_resource path="res://data/image/char/snails/512_61.png" type="Texture" id=290]
+[ext_resource path="res://data/image/char/snails/512_73.png" type="Texture" id=291]
+[ext_resource path="res://data/image/char/snails/512_68.png" type="Texture" id=292]
+[ext_resource path="res://data/image/char/snails/512_48.png" type="Texture" id=293]
+[ext_resource path="res://data/image/ui/show1.png" type="Texture" id=294]
+[ext_resource path="res://data/image/char/think/512_47.png" type="Texture" id=295]
+[ext_resource path="res://data/image/char/think/512_36.png" type="Texture" id=296]
+[ext_resource path="res://data/image/char/think/512_13.png" type="Texture" id=297]
+[ext_resource path="res://data/image/char/think/512_51.png" type="Texture" id=298]
+[ext_resource path="res://data/image/char/think/512_21.png" type="Texture" id=299]
+[ext_resource path="res://data/image/char/think/512_49.png" type="Texture" id=300]
+[ext_resource path="res://data/image/char/think/512_32.png" type="Texture" id=301]
+[ext_resource path="res://data/image/char/think/512_56.png" type="Texture" id=302]
+[ext_resource path="res://data/image/char/think/512_57.png" type="Texture" id=303]
+[ext_resource path="res://data/image/char/think/512_31.png" type="Texture" id=304]
+[ext_resource path="res://data/image/char/think/512_42.png" type="Texture" id=305]
+[ext_resource path="res://data/image/char/think/512_48.png" type="Texture" id=306]
+[ext_resource path="res://data/image/char/think/512_59.png" type="Texture" id=307]
+[ext_resource path="res://data/image/char/think/512_24.png" type="Texture" id=308]
+[ext_resource path="res://data/image/char/think/512_16.png" type="Texture" id=309]
+[ext_resource path="res://data/image/char/think/512_20.png" type="Texture" id=310]
+[ext_resource path="res://data/image/char/think/512_26.png" type="Texture" id=311]
+[ext_resource path="res://data/image/char/think/512_44.png" type="Texture" id=312]
+[ext_resource path="res://data/image/char/think/512_53.png" type="Texture" id=313]
+[ext_resource path="res://data/image/char/think/512_22.png" type="Texture" id=314]
+[ext_resource path="res://data/image/char/think/512_25.png" type="Texture" id=315]
+[ext_resource path="res://data/image/char/think/512_15.png" type="Texture" id=316]
+[ext_resource path="res://data/image/char/think/512_19.png" type="Texture" id=317]
+[ext_resource path="res://data/image/char/think/512_37.png" type="Texture" id=318]
+[ext_resource path="res://data/image/char/think/512_55.png" type="Texture" id=319]
+[ext_resource path="res://data/image/char/think/512_33.png" type="Texture" id=320]
+[ext_resource path="res://data/image/char/think/512_34.png" type="Texture" id=321]
+[ext_resource path="res://data/image/char/think/512_45.png" type="Texture" id=322]
+[ext_resource path="res://data/image/char/think/512_14.png" type="Texture" id=323]
+[ext_resource path="res://data/image/char/think/512_43.png" type="Texture" id=324]
+[ext_resource path="res://data/image/char/think/512_18.png" type="Texture" id=325]
+[ext_resource path="res://data/image/char/think/512_28.png" type="Texture" id=326]
+[ext_resource path="res://data/image/char/think/512_17.png" type="Texture" id=327]
+[ext_resource path="res://data/image/char/think/512_29.png" type="Texture" id=328]
+[ext_resource path="res://data/image/char/think/512_39.png" type="Texture" id=329]
+[ext_resource path="res://data/image/char/think/512_40.png" type="Texture" id=330]
+[ext_resource path="res://data/image/char/think/512_41.png" type="Texture" id=331]
+[ext_resource path="res://data/image/char/think/512_30.png" type="Texture" id=332]
+[ext_resource path="res://data/image/char/think/512_52.png" type="Texture" id=333]
+[ext_resource path="res://data/image/char/think/512_54.png" type="Texture" id=334]
+[ext_resource path="res://data/image/char/think/512_46.png" type="Texture" id=335]
+[ext_resource path="res://data/image/char/think/512_50.png" type="Texture" id=336]
+[ext_resource path="res://data/image/char/think/512_58.png" type="Texture" id=337]
+[ext_resource path="res://data/image/char/think/512_38.png" type="Texture" id=338]
+[ext_resource path="res://data/image/char/think/512_27.png" type="Texture" id=339]
+[ext_resource path="res://data/image/char/think/512_35.png" type="Texture" id=340]
+[ext_resource path="res://data/image/char/think/512_23.png" type="Texture" id=341]
+[ext_resource path="res://data/image/char/think/512_4.png" type="Texture" id=342]
+[ext_resource path="res://data/image/char/think/512_10.png" type="Texture" id=343]
+[ext_resource path="res://data/image/char/think/512_11.png" type="Texture" id=344]
+[ext_resource path="res://data/image/char/think/512_5.png" type="Texture" id=345]
+[ext_resource path="res://data/image/char/think/512_7.png" type="Texture" id=346]
+[ext_resource path="res://data/image/char/think/512_12.png" type="Texture" id=347]
+[ext_resource path="res://data/image/char/think/512_9.png" type="Texture" id=348]
+[ext_resource path="res://data/image/char/think/512_2.png" type="Texture" id=349]
+[ext_resource path="res://data/image/char/think/512_1.png" type="Texture" id=350]
+[ext_resource path="res://data/image/char/think/512_6.png" type="Texture" id=351]
+[ext_resource path="res://data/image/char/think/512_8.png" type="Texture" id=352]
+[ext_resource path="res://data/image/char/think/512_0.png" type="Texture" id=353]
+[ext_resource path="res://data/image/char/think/512_3.png" type="Texture" id=354]
+
+[sub_resource type="StyleBoxFlat" id=1]
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="Theme" id=2]
+Panel/styles/panel = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 90, 376 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 90, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer2:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 900, 376 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Label:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1024, 192 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Label:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Node2D:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("OK:rect_position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 432, 700 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "char"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 2, 2 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 500 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OK:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( -2, -2 ),
+"update": 0,
+"values": [ Vector2( 432, 700 ), Vector2( 432, 472 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "driver_show"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer2:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 2, 2 ),
+"update": 0,
+"values": [ Vector2( 900, 376 ), Vector2( 0, 376 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( -2, -2 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( -2, -2 ),
+"update": 0,
+"values": [ Vector2( 1024, 192 ), Vector2( 200, 192 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "select_show"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 2, 2 ),
+"update": 0,
+"values": [ Vector2( 1000, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( -2, -2 ),
+"update": 0,
+"values": [ Vector2( 1000, 376 ), Vector2( 0, 376 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( -2, -2 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "texture"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.45 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 90, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.05, 0.5 ),
+"transitions": PoolRealArray( -2, -2 ),
+"update": 0,
+"values": [ Vector2( 90, 376 ), Vector2( 0, 376 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.05, 0.5 ),
+"transitions": PoolRealArray( -2, -2 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 242 ), ExtResource( 245 ), ExtResource( 223 ), ExtResource( 195 ), ExtResource( 194 ), ExtResource( 233 ), ExtResource( 220 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 224 ), ExtResource( 171 ), ExtResource( 258 ), ExtResource( 254 ), ExtResource( 193 ), ExtResource( 252 ), ExtResource( 255 ), ExtResource( 200 ), ExtResource( 132 ), ExtResource( 187 ), ExtResource( 253 ), ExtResource( 215 ), ExtResource( 249 ), ExtResource( 247 ), ExtResource( 149 ), ExtResource( 165 ), ExtResource( 251 ), ExtResource( 250 ), ExtResource( 166 ), ExtResource( 225 ), ExtResource( 76 ), ExtResource( 176 ), ExtResource( 257 ), ExtResource( 248 ), ExtResource( 256 ), ExtResource( 201 ), ExtResource( 235 ), ExtResource( 244 ), ExtResource( 238 ), ExtResource( 241 ), ExtResource( 185 ), ExtResource( 227 ) ],
+"loop": true,
+"name": "angry",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 127 ), ExtResource( 138 ), ExtResource( 142 ), ExtResource( 103 ), ExtResource( 150 ), ExtResource( 104 ), ExtResource( 179 ), ExtResource( 106 ), ExtResource( 130 ), ExtResource( 112 ), ExtResource( 159 ), ExtResource( 145 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 96 ), ExtResource( 126 ), ExtResource( 111 ), ExtResource( 113 ), ExtResource( 110 ), ExtResource( 109 ), ExtResource( 114 ), ExtResource( 101 ), ExtResource( 97 ), ExtResource( 115 ), ExtResource( 98 ), ExtResource( 100 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 139 ), ExtResource( 146 ), ExtResource( 134 ), ExtResource( 152 ), ExtResource( 156 ), ExtResource( 178 ), ExtResource( 151 ), ExtResource( 170 ), ExtResource( 153 ), ExtResource( 182 ), ExtResource( 164 ), ExtResource( 133 ), ExtResource( 147 ), ExtResource( 85 ) ],
+"loop": true,
+"name": "hot",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 44 ), ExtResource( 36 ), ExtResource( 55 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 39 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 47 ), ExtResource( 56 ), ExtResource( 21 ), ExtResource( 58 ), ExtResource( 33 ), ExtResource( 45 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 34 ), ExtResource( 62 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 35 ), ExtResource( 53 ), ExtResource( 49 ), ExtResource( 26 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 38 ), ExtResource( 41 ), ExtResource( 57 ), ExtResource( 59 ), ExtResource( 25 ), ExtResource( 60 ), ExtResource( 48 ), ExtResource( 29 ), ExtResource( 43 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 61 ), ExtResource( 13 ), ExtResource( 63 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 31 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 22 ), ExtResource( 68 ), ExtResource( 64 ), ExtResource( 69 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 65 ), ExtResource( 74 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 70 ), ExtResource( 71 ) ],
+"loop": true,
+"name": "slobber",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 102 ), ExtResource( 123 ), ExtResource( 92 ), ExtResource( 99 ), ExtResource( 116 ), ExtResource( 82 ), ExtResource( 117 ), ExtResource( 105 ), ExtResource( 118 ), ExtResource( 94 ), ExtResource( 121 ), ExtResource( 119 ), ExtResource( 95 ), ExtResource( 122 ), ExtResource( 124 ), ExtResource( 89 ), ExtResource( 87 ), ExtResource( 120 ), ExtResource( 125 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 86 ), ExtResource( 88 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 93 ), ExtResource( 181 ), ExtResource( 148 ), ExtResource( 155 ), ExtResource( 154 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 143 ), ExtResource( 206 ), ExtResource( 209 ), ExtResource( 243 ), ExtResource( 234 ), ExtResource( 207 ), ExtResource( 75 ), ExtResource( 266 ), ExtResource( 272 ), ExtResource( 293 ), ExtResource( 265 ), ExtResource( 259 ), ExtResource( 261 ), ExtResource( 276 ), ExtResource( 274 ), ExtResource( 288 ), ExtResource( 279 ), ExtResource( 277 ), ExtResource( 281 ), ExtResource( 260 ), ExtResource( 284 ), ExtResource( 273 ), ExtResource( 290 ), ExtResource( 268 ), ExtResource( 280 ), ExtResource( 286 ), ExtResource( 289 ), ExtResource( 262 ), ExtResource( 278 ), ExtResource( 292 ), ExtResource( 271 ), ExtResource( 263 ), ExtResource( 264 ), ExtResource( 285 ), ExtResource( 291 ), ExtResource( 270 ), ExtResource( 275 ), ExtResource( 282 ), ExtResource( 267 ), ExtResource( 283 ), ExtResource( 287 ), ExtResource( 269 ) ],
+"loop": true,
+"name": "snails",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 180 ), ExtResource( 232 ), ExtResource( 213 ), ExtResource( 158 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 202 ), ExtResource( 239 ), ExtResource( 191 ), ExtResource( 188 ), ExtResource( 236 ), ExtResource( 160 ), ExtResource( 184 ), ExtResource( 231 ), ExtResource( 208 ), ExtResource( 137 ), ExtResource( 157 ), ExtResource( 212 ), ExtResource( 214 ), ExtResource( 131 ), ExtResource( 210 ), ExtResource( 173 ), ExtResource( 189 ), ExtResource( 230 ), ExtResource( 198 ), ExtResource( 136 ), ExtResource( 240 ), ExtResource( 219 ), ExtResource( 246 ), ExtResource( 190 ), ExtResource( 144 ), ExtResource( 175 ), ExtResource( 218 ), ExtResource( 186 ), ExtResource( 203 ), ExtResource( 135 ), ExtResource( 196 ), ExtResource( 161 ), ExtResource( 177 ), ExtResource( 167 ), ExtResource( 192 ), ExtResource( 197 ), ExtResource( 216 ), ExtResource( 222 ), ExtResource( 172 ), ExtResource( 199 ), ExtResource( 217 ), ExtResource( 211 ), ExtResource( 226 ), ExtResource( 174 ), ExtResource( 237 ), ExtResource( 163 ), ExtResource( 183 ), ExtResource( 162 ), ExtResource( 221 ) ],
+"loop": true,
+"name": "stupid",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 353 ), ExtResource( 350 ), ExtResource( 349 ), ExtResource( 354 ), ExtResource( 342 ), ExtResource( 345 ), ExtResource( 351 ), ExtResource( 346 ), ExtResource( 352 ), ExtResource( 348 ), ExtResource( 343 ), ExtResource( 344 ), ExtResource( 347 ), ExtResource( 297 ), ExtResource( 323 ), ExtResource( 316 ), ExtResource( 309 ), ExtResource( 327 ), ExtResource( 325 ), ExtResource( 317 ), ExtResource( 310 ), ExtResource( 299 ), ExtResource( 314 ), ExtResource( 341 ), ExtResource( 308 ), ExtResource( 315 ), ExtResource( 311 ), ExtResource( 339 ), ExtResource( 326 ), ExtResource( 328 ), ExtResource( 332 ), ExtResource( 304 ), ExtResource( 301 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 340 ), ExtResource( 296 ), ExtResource( 318 ), ExtResource( 338 ), ExtResource( 329 ), ExtResource( 330 ), ExtResource( 331 ), ExtResource( 305 ), ExtResource( 324 ), ExtResource( 312 ), ExtResource( 322 ), ExtResource( 335 ), ExtResource( 295 ), ExtResource( 306 ), ExtResource( 300 ), ExtResource( 336 ), ExtResource( 298 ), ExtResource( 333 ), ExtResource( 313 ), ExtResource( 334 ), ExtResource( 319 ), ExtResource( 302 ), ExtResource( 303 ), ExtResource( 337 ), ExtResource( 307 ) ],
+"loop": true,
+"name": "think",
+"speed": 30.0
+} ]
+
+[sub_resource type="Theme" id=8]
+
+[node name="Node" type="Node"]
+script = ExtResource( 6 )
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 10.0
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 853.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 90.0
+margin_top = 376.0
+margin_right = 1114.0
+margin_bottom = 500.0
+custom_constants/separation = 90
+alignment = 1
+
+[node name="swimButton" type="Button" parent="HBoxContainer"]
+margin_left = 83.0
+margin_right = 311.0
+margin_bottom = 124.0
+theme = ExtResource( 4 )
+text = "游     泳"
+
+[node name="runButton" type="Button" parent="HBoxContainer"]
+margin_left = 401.0
+margin_right = 629.0
+margin_bottom = 124.0
+theme = ExtResource( 4 )
+text = "跑     步"
+
+[node name="pingpongButton" type="Button" parent="HBoxContainer"]
+margin_left = 719.0
+margin_right = 941.0
+margin_bottom = 124.0
+theme = ExtResource( 4 )
+text = "乒乓球"
+
+[node name="Control" type="Control" parent="."]
+margin_left = 90.0
+margin_right = 130.0
+margin_bottom = 40.0
+
+[node name="swim" type="TextureRect" parent="Control"]
+margin_left = 44.0
+margin_top = 123.0
+margin_right = 344.0
+margin_bottom = 323.0
+theme = SubResource( 2 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="run" type="TextureRect" parent="Control"]
+margin_left = 364.0
+margin_top = 123.0
+margin_right = 664.0
+margin_bottom = 323.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="pingpong" type="TextureRect" parent="Control"]
+margin_left = 684.0
+margin_top = 123.0
+margin_right = 984.0
+margin_bottom = 323.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "texture"
+anims/RESET = SubResource( 3 )
+anims/char = SubResource( 9 )
+anims/driver_show = SubResource( 5 )
+anims/select_show = SubResource( 6 )
+anims/texture = SubResource( 4 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_left = 900.0
+margin_top = 376.0
+margin_right = 1924.0
+margin_bottom = 500.0
+theme = ExtResource( 4 )
+custom_constants/separation = 90
+alignment = 1
+
+[node name="phone" type="Button" parent="HBoxContainer2"]
+margin_left = 309.0
+margin_right = 467.0
+margin_bottom = 124.0
+text = "手机"
+
+[node name="mouse" type="Button" parent="HBoxContainer2"]
+margin_left = 557.0
+margin_right = 715.0
+margin_bottom = 124.0
+text = "鼠标"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1024.0
+margin_top = 192.0
+margin_right = 1664.0
+margin_bottom = 309.0
+theme = ExtResource( 9 )
+text = "选择你的控制设备"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="char" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 512, -216 )
+scale = Vector2( 0.75, 0.75 )
+frames = SubResource( 7 )
+animation = "think"
+frame = 58
+playing = true
+
+[node name="prev" type="TextureButton" parent="Node2D"]
+margin_left = 112.0
+margin_top = -216.0
+margin_right = 312.0
+margin_bottom = -16.0
+theme = SubResource( 8 )
+texture_normal = ExtResource( 294 )
+texture_pressed = ExtResource( 294 )
+texture_hover = ExtResource( 294 )
+texture_disabled = ExtResource( 294 )
+texture_focused = ExtResource( 294 )
+flip_h = true
+
+[node name="next" type="TextureButton" parent="Node2D"]
+margin_left = 712.0
+margin_top = -216.0
+margin_right = 912.0
+margin_bottom = -16.0
+theme = SubResource( 8 )
+texture_normal = ExtResource( 294 )
+texture_pressed = ExtResource( 294 )
+texture_hover = ExtResource( 294 )
+texture_disabled = ExtResource( 294 )
+texture_focused = ExtResource( 294 )
+
+[node name="Label" type="Label" parent="Node2D"]
+margin_left = 352.0
+margin_top = -508.0
+margin_right = 672.0
+margin_bottom = -391.0
+theme = ExtResource( 9 )
+text = "选择角色"
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="OK" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 700.0
+margin_right = 590.0
+margin_bottom = 824.0
+theme = ExtResource( 4 )
+text = "确定"
+
+[connection signal="pressed" from="HBoxContainer/swimButton" to="." method="_on_swimButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/runButton" to="." method="_on_runButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/pingpongButton" to="." method="_on_pingpongButton_pressed"]
+[connection signal="pressed" from="HBoxContainer2/phone" to="." method="_on_phone_pressed"]
+[connection signal="pressed" from="HBoxContainer2/mouse" to="." method="_on_mouse_pressed"]
+[connection signal="pressed" from="Node2D/prev" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="Node2D/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="OK" to="." method="_on_OK_pressed"]

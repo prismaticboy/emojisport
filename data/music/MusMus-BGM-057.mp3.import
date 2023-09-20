@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MusMus-BGM-057.mp3-ac1d4aec8b2b81a3506b2400722875d8.mp3str"
+
+[deps]
+
+source_file="res://data/music/MusMus-BGM-057.mp3"
+dest_files=[ "res://.import/MusMus-BGM-057.mp3-ac1d4aec8b2b81a3506b2400722875d8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

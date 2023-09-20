@@ -1,0 +1,338 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://data/image/running-1018587_1280.png" type="Texture" id=1]
+[ext_resource path="res://data/audio/btn01.mp3" type="AudioStream" id=2]
+[ext_resource path="res://scene/menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://script/Run.gd" type="Script" id=4]
+[ext_resource path="res://data/audio/btn02.mp3" type="AudioStream" id=5]
+[ext_resource path="res://theme/Runlabel.tres" type="Theme" id=6]
+[ext_resource path="res://data/audio/cheers2.mp3" type="AudioStream" id=7]
+[ext_resource path="res://data/audio/MusMus-BGM-126.mp3" type="AudioStream" id=8]
+[ext_resource path="res://theme/mainButton.tres" type="Theme" id=9]
+[ext_resource path="res://theme/scoreLabel.tres" type="Theme" id=10]
+[ext_resource path="res://data/audio/click4.ogg" type="AudioStream" id=11]
+
+[sub_resource type="Shader" id=4]
+code = "shader_type canvas_item;
+uniform int OCTAVE = 6;
+uniform float mulscale = 5.0;
+uniform float height = 0.6;
+uniform float tide = 0.1;
+uniform float foamthickness = 0.1;
+uniform float timescale = 1.0;
+uniform float waterdeep = 0.3;
+uniform vec4 WATER_COL : hint_color =  vec4(0.04, 0.38, 0.88, 1.0);
+uniform vec4 WATER2_COL : hint_color =  vec4(0.04, 0.35, 0.78, 1.0);
+uniform vec4 FOAM_COL : hint_color = vec4(0.8125, 0.9609, 0.9648, 1.0);
+
+
+float rand(vec2 input){
+	return fract(sin(dot(input,vec2(23.53,44.0)))*42350.45);
+}
+
+float perlin(vec2 input){
+	vec2 i = floor(input);
+	vec2 j = fract(input);
+	vec2 coord = smoothstep(0.,1.,j);
+	
+	float a = rand(i);
+	float b = rand(i+vec2(1.0,0.0));
+	float c = rand(i+vec2(0.0,1.0));
+	float d = rand(i+vec2(1.0,1.0));
+
+	return mix(mix(a,b,coord.x),mix(c,d,coord.x),coord.y);
+}
+
+float fbm(vec2 input){
+	float value = 0.0;
+	float scale = 0.5;
+	
+	for(int i = 0; i < OCTAVE; i++){
+		value += perlin(input)*scale;
+		input*=2.0;
+		scale*=0.5;
+	}
+	return value;
+}
+
+void fragment(){
+	float newtime = TIME*timescale;
+	float fbmval = fbm(vec2(UV.x*mulscale+0.2*sin(0.3*newtime)+0.15*newtime,-0.05*newtime+UV.y*mulscale+0.1*cos(0.68*newtime)));
+	float fbmvalshadow = fbm(vec2(UV.x*mulscale+0.2*sin(-0.6*newtime + 25.0 * UV.y)+0.15*newtime+3.0,-0.05*newtime+UV.y*mulscale+0.13*cos(-0.68*newtime))-7.0+0.1*sin(0.43*newtime));
+	float myheight = height+tide*sin(newtime+5.0*UV.x-8.0*UV.y);
+	float shadowheight = height+tide*1.3*cos(newtime+2.0*UV.x-2.0*UV.y);
+	float withinFoam = step(myheight, fbmval)*step(fbmval, myheight + foamthickness);
+	float shadow = (1.0-withinFoam)*step(shadowheight, fbmvalshadow)*step(fbmvalshadow, shadowheight + foamthickness * 0.7);
+	COLOR = withinFoam*FOAM_COL + shadow*WATER2_COL + ((1.0-withinFoam)*(1.0-shadow))*WATER_COL;
+	//COLOR = vec4(1.0,1.0,1.0,fbmval);
+}"
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 4 )
+shader_param/OCTAVE = 6
+shader_param/mulscale = 123.0
+shader_param/height = 0.6
+shader_param/tide = 0.1
+shader_param/foamthickness = 0.1
+shader_param/timescale = 1.0
+shader_param/waterdeep = 0.3
+shader_param/WATER_COL = Color( 0.04, 0.38, 0.88, 1 )
+shader_param/WATER2_COL = Color( 0.04, 0.35, 0.78, 1 )
+shader_param/FOAM_COL = Color( 0.8125, 0.9609, 0.9648, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0.615686, 0.27451, 1 )
+
+[sub_resource type="Theme" id=3]
+Panel/styles/panel = SubResource( 2 )
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2, 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "3" ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "idle"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9, 1, 1.9, 2, 2.9 ),
+"transitions": PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ),
+"update": 0,
+"values": [ Vector2( 2, 2 ), Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 0.5, 0.5, 0.5, 0.5 ),
+"update": 1,
+"values": [ "3", "2", "1", "GO" ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("timer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+}, {
+"args": [ 0.0 ],
+"method": "play"
+}, {
+"args": [ 0.0 ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("go")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ 0.0 ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("Label")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.247059, 0.776471, 0.678431, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.129412, 0.184314, 0.176471, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Theme" id=10]
+Panel/styles/panel = SubResource( 1 )
+
+[node name="Run" type="Node"]
+script = ExtResource( 4 )
+
+[node name="Panel" type="ColorRect" parent="."]
+material = SubResource( 5 )
+margin_left = -944.0
+margin_top = -680.0
+margin_right = 1080.0
+margin_bottom = 776.0
+theme = SubResource( 3 )
+color = Color( 0.345098, 0.780392, 0.729412, 1 )
+
+[node name="bg" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="menu" parent="." instance=ExtResource( 3 )]
+
+[node name="Label2" type="Label" parent="menu"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -184.0
+margin_top = 56.0
+margin_right = -144.0
+margin_bottom = 159.0
+theme = ExtResource( 6 )
+text = "0sec"
+align = 1
+valign = 1
+
+[node name="timer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="go" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -176.0
+margin_top = -132.0
+margin_right = -68.0
+margin_bottom = -29.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 56, 56 )
+theme = ExtResource( 6 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/RESET = SubResource( 8 )
+anims/idle = SubResource( 9 )
+
+[node name="cheer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 7 )
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 8 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Score" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+
+[node name="Panel" type="Panel" parent="Score"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -200.0
+margin_right = 250.0
+margin_bottom = 200.0
+theme = SubResource( 10 )
+
+[node name="Button" type="Button" parent="Score"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = 60.0
+margin_right = 110.0
+margin_bottom = 184.0
+theme = ExtResource( 9 )
+text = "主菜单"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Score"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -188.0
+margin_right = 80.0
+margin_bottom = 50.0
+alignment = 1
+
+[node name="now" type="Label" parent="Score/VBoxContainer"]
+margin_top = 23.0
+margin_right = 320.0
+margin_bottom = 117.0
+theme = ExtResource( 10 )
+text = "当前成绩："
+
+[node name="max" type="Label" parent="Score/VBoxContainer"]
+margin_top = 121.0
+margin_right = 320.0
+margin_bottom = 215.0
+theme = ExtResource( 10 )
+text = "最佳成绩："
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[connection signal="pressed" from="Score/Button" to="." method="_on_Button_pressed"]
