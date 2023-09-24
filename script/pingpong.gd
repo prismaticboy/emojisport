@@ -1,9 +1,10 @@
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var count:int=0
+var main_pos = Vector2(224,288)
+
+
 onready var tween = $Tween
 
 var score:int=0
@@ -15,6 +16,15 @@ func _ready():
 		var board = preload("res://scene/board.tscn").instance()
 		board.position=Vector2(224,288)
 		add_child(board)
+	if AutoLoad.is_local==2:
+		for i in AutoLoad.playerID:
+			var board=str(i)
+			board=preload("res://scene/board.tscn").instance()
+			board.position=main_pos
+			board.set_name(str(AutoLoad.playerID[count]))
+			board.set_network_master(AutoLoad.playerID[count])
+			add_child(board)
+			count+=1
 	pass # Replace with function body.
 
 
@@ -46,7 +56,6 @@ func _on_Timer2_timeout():
 		$Timer2.stop()
 		$Timer.stop()
 		$Label.hide()
-		$board.queue_free()
 		$Score.show()
 		$Score/VBoxContainer/now.text+=str(score)
 		if AutoLoad.pingScore<=score:

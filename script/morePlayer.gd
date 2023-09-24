@@ -35,4 +35,6 @@ func _on_Button_pressed():
 		rpc_id(i,"start_game",i,sport)
 	if sport==2:
 		get_tree().change_scene("res://scene/Run.tscn")
+	if sport==3:
+		get_tree().change_scene("res://scene/pingpong.tscn")
 	pass # Replace with function body.

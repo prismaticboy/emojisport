@@ -34,7 +34,11 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_RigidBody2D_body_entered(body):
-	if body.name=="board":
-		emit_signal("Score")
-		queue_free()
+	for i in AutoLoad.playerID:
+		if body.name==str(i):
+			emit_signal("Score")
+			queue_free()
+#	if body.name=="board":
+#		emit_signal("Score")
+#		queue_free()
 	pass # Replace with function body.
