@@ -47,6 +47,7 @@ func _ready():
 
 
 func _on_start_pressed():
+	AutoLoad.is_local=1
 	click.play()
 	yield(click,"finished")
 	get_tree().change_scene("res://scene/load.tscn")
@@ -54,9 +55,10 @@ func _on_start_pressed():
 
 
 func _on_continue_pressed():
+	AutoLoad.is_local=2
 	click.play()
 	yield(click,"finished")
-	get_tree().change_scene("res://scene/morePlayer.tscn")
+	get_tree().change_scene("res://scene/sport.tscn")
 	pass # Replace with function body.
 
 

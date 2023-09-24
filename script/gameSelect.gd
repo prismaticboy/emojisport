@@ -119,5 +119,5 @@ func _on_OK_pressed():
 		if AutoLoad.controlSelect==1:
 			pass
 		if AutoLoad.controlSelect==2:
-			pass
+			get_tree().change_scene("res://scene/pingpong.tscn")
 	pass # Replace with function body.

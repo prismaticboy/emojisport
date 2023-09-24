@@ -321,14 +321,14 @@ margin_top = 23.0
 margin_right = 320.0
 margin_bottom = 117.0
 theme = ExtResource( 10 )
-text = "当前成绩："
+text = "当前:"
 
 [node name="max" type="Label" parent="Score/VBoxContainer"]
 margin_top = 121.0
 margin_right = 320.0
 margin_bottom = 215.0
 theme = ExtResource( 10 )
-text = "最佳成绩："
+text = "最佳:"
 
 [node name="click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )

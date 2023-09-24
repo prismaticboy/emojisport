@@ -842,7 +842,7 @@ position = Vector2( 512, -216 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 7 )
 animation = "think"
-frame = 58
+frame = 42
 playing = true
 
 [node name="prev" type="TextureButton" parent="Node2D"]

@@ -266,21 +266,21 @@ texture = ExtResource( 185 )
 position = Vector2( 1112, 272 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 2 )
-frame = 8
+frame = 3
 playing = true
 
 [node name="stupid" type="AnimatedSprite" parent="."]
 position = Vector2( 1104, 160 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 4 )
-frame = 11
+frame = 52
 playing = true
 
 [node name="angry" type="AnimatedSprite" parent="."]
 position = Vector2( 1104, 56 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 6 )
-frame = 18
+frame = 5
 playing = true
 
 [node name="Tween" type="Tween" parent="."]

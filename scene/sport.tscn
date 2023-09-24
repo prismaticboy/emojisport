@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://theme/mainButton.tres" type="Theme" id=1]
+[ext_resource path="res://scene/sport.gd" type="Script" id=2]
+
+[node name="sport" type="HBoxContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -375.0
+margin_top = -62.0
+margin_right = 375.0
+margin_bottom = 62.0
+theme = ExtResource( 1 )
+custom_constants/separation = 50
+alignment = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" type="Button" parent="."]
+margin_right = 214.0
+margin_bottom = 124.0
+text = "游    泳"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 264.0
+margin_right = 478.0
+margin_bottom = 124.0
+text = "跑    步"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 528.0
+margin_right = 750.0
+margin_bottom = 124.0
+text = "乒乓球"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]

@@ -12,7 +12,7 @@ script = ExtResource( 43 )
 scale = Vector2( 0.05, 0.05 )
 frames = ExtResource( 1 )
 animation = "think"
-frame = 32
+frame = 1
 playing = true
 __meta__ = {
 "_edit_lock_": true

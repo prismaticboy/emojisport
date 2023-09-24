@@ -1,12 +1,15 @@
 extends Control
 
 var ip_adress:String
+var sport:int=AutoLoad.sportSelect
 #receive
 remote func register_player(id):
 	print(id)
 
 
 func _ready():
+	
+	AutoLoad.sportSelect=10
 	ip_adress = IP.resolve_hostname(str(OS.get_environment("COMPUTERNAME")),1)
 	$Label.text+=ip_adress
 	var net = NetworkedMultiplayerENet.new()
@@ -26,9 +29,10 @@ func connected(id):
 
 
 func _on_Button_pressed():
+	
 	for i in AutoLoad.playerID:
 		print(i)
-		rpc_id(i,"start_game",i)
-		
-	get_tree().change_scene("res://scene/Run.tscn")
+		rpc_id(i,"start_game",i,sport)
+	if sport==2:
+		get_tree().change_scene("res://scene/Run.tscn")
 	pass # Replace with function body.
