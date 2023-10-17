@@ -1,4 +1,4 @@
-[gd_scene load_steps=351 format=2]
+[gd_scene load_steps=352 format=2]
 
 [ext_resource path="res://data/image/char/think/512_26.png" type="Texture" id=1]
 [ext_resource path="res://data/image/char/think/512_40.png" type="Texture" id=2]
@@ -346,8 +346,9 @@
 [ext_resource path="res://data/image/char/Slobber/512(2)_47.png" type="Texture" id=344]
 [ext_resource path="res://data/image/char/Slobber/512(2)_48.png" type="Texture" id=345]
 [ext_resource path="res://data/image/char/Slobber/512(2)_45.png" type="Texture" id=346]
-[ext_resource path="res://scene/emojiSelect.gd" type="Script" id=347]
+[ext_resource path="res://script/emojiSelect.gd" type="Script" id=347]
 [ext_resource path="res://theme/mainButton.tres" type="Theme" id=348]
+[ext_resource path="res://scene/select_bg.tscn" type="PackedScene" id=349]
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
@@ -388,12 +389,14 @@ animations = [ {
 position = Vector2( 3, 489 )
 script = ExtResource( 347 )
 
+[node name="bg" parent="." instance=ExtResource( 349 )]
+
 [node name="char" type="AnimatedSprite" parent="."]
 position = Vector2( 512, -216 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 7 )
 animation = "think"
-frame = 22
+frame = 43
 playing = true
 
 [node name="prev" type="TextureButton" parent="."]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://theme/mainButton.tres" type="Theme" id=1]
-[ext_resource path="res://scene/sport.gd" type="Script" id=2]
+[ext_resource path="res://script/sport.gd" type="Script" id=2]
+[ext_resource path="res://scene/select_bg.tscn" type="PackedScene" id=3]
 
 [node name="sport" type="HBoxContainer"]
 anchor_left = 0.5
@@ -20,21 +21,27 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="bg" parent="." instance=ExtResource( 3 )]
+offset = Vector2( -137, -238 )
+
 [node name="Button" type="Button" parent="."]
 margin_right = 214.0
 margin_bottom = 124.0
-text = "游    泳"
+grow_horizontal = 2
+text = "拳    击"
 
 [node name="Button2" type="Button" parent="."]
 margin_left = 264.0
 margin_right = 478.0
 margin_bottom = 124.0
+grow_horizontal = 2
 text = "跑    步"
 
 [node name="Button3" type="Button" parent="."]
 margin_left = 528.0
 margin_right = 750.0
 margin_bottom = 124.0
+grow_horizontal = 2
 text = "乒乓球"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

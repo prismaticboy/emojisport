@@ -93,7 +93,7 @@ func _playerGoal():
 	
 func _time():
 	timeCount+=1
-	$menu/Label2.text = str(timeCount)+"秒"
+	$menu/Label2.text = str(timeCount)+tr("秒")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 

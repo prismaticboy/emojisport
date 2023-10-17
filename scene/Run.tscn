@@ -236,7 +236,6 @@ margin_top = 56.0
 margin_right = -144.0
 margin_bottom = 159.0
 theme = ExtResource( 6 )
-text = "0sec"
 align = 1
 valign = 1
 
@@ -302,6 +301,7 @@ margin_left = -112.0
 margin_top = 60.0
 margin_right = 110.0
 margin_bottom = 184.0
+grow_horizontal = 2
 theme = ExtResource( 9 )
 text = "主菜单"
 
@@ -321,14 +321,14 @@ margin_top = 23.0
 margin_right = 320.0
 margin_bottom = 117.0
 theme = ExtResource( 10 )
-text = "当前:"
+text = "当前分:"
 
 [node name="max" type="Label" parent="Score/VBoxContainer"]
 margin_top = 121.0
 margin_right = 320.0
 margin_bottom = 215.0
 theme = ExtResource( 10 )
-text = "最佳:"
+text = "最高分:"
 
 [node name="click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )

@@ -42,6 +42,7 @@ margin_left = -112.0
 margin_top = 60.0
 margin_right = 110.0
 margin_bottom = 184.0
+grow_horizontal = 2
 theme = ExtResource( 1 )
 text = "主菜单"
 
@@ -57,17 +58,17 @@ margin_bottom = 50.0
 alignment = 1
 
 [node name="now" type="Label" parent="VBoxContainer"]
-margin_right = 400.0
+margin_right = 320.0
 margin_bottom = 117.0
 theme = ExtResource( 2 )
-text = "当前成绩："
+text = "当前分:"
 
 [node name="max" type="Label" parent="VBoxContainer"]
 margin_top = 121.0
-margin_right = 400.0
+margin_right = 320.0
 margin_bottom = 238.0
 theme = ExtResource( 2 )
-text = "最佳成绩："
+text = "最高分:"
 
 [node name="click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

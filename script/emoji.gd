@@ -26,4 +26,4 @@ func _process(delta):
 		emit_signal("onplayerGoal")
 		set_process(false)
 	if Input.is_action_just_pressed("Run") and !get_tree().is_network_server():
-		self.position.x-=23
+		self.position.x-=2

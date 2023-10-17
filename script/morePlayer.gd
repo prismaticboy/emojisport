@@ -29,10 +29,11 @@ func connected(id):
 
 
 func _on_Button_pressed():
-	
 	for i in AutoLoad.playerID:
 		print(i)
 		rpc_id(i,"start_game",i,sport)
+	if sport==1:
+		get_tree().change_scene("res://scene/punch.tscn")
 	if sport==2:
 		get_tree().change_scene("res://scene/Run.tscn")
 	if sport==3:

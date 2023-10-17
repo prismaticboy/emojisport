@@ -8,7 +8,7 @@ var main_pos = Vector2(224,288)
 onready var tween = $Tween
 
 var score:int=0
-var timer:int=7
+var timer:int=88
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -67,5 +67,6 @@ func _on_Timer2_timeout():
 
 
 func _on_Button_pressed():
+	get_tree().network_peer = null
 	get_tree().change_scene("res://scene/MainScene.tscn")
 	pass # Replace with function body.

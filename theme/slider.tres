@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=4 format=2]
+
+[ext_resource path="res://data/image/ui/slider.png" type="Texture" id=1]
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.380392, 0.898039, 0.192157, 1 )
+border_width_top = 10
+border_width_bottom = 10
+border_color = Color( 0.380392, 0.898039, 0.192157, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.235294, 0.223529, 0.223529, 1 )
+border_width_top = 20
+border_width_bottom = 20
+border_color = Color( 0.235294, 0.223529, 0.223529, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[resource]
+HSlider/icons/grabber = ExtResource( 1 )
+HSlider/icons/grabber_disabled = ExtResource( 1 )
+HSlider/icons/grabber_highlight = ExtResource( 1 )
+HSlider/icons/tick = ExtResource( 1 )
+HSlider/styles/grabber_area = SubResource( 14 )
+HSlider/styles/grabber_area_highlight = SubResource( 14 )
+HSlider/styles/slider = SubResource( 15 )

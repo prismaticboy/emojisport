@@ -21,6 +21,7 @@ func _ready():
 func _on_mainMenu_pressed():
 	click.play()
 	get_tree().network_peer = null
+	AutoLoad.playerID=[]
 	get_tree().change_scene("res://scene/MainScene.tscn")
 	pass # Replace with function body.
 

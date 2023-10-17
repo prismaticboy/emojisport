@@ -152,5 +152,5 @@ anims/load = SubResource( 6 )
 position = Vector2( 496, 208 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 7 )
-frame = 29
+frame = 41
 playing = true

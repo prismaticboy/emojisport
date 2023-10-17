@@ -1,4 +1,4 @@
-[gd_scene load_steps=151 format=2]
+[gd_scene load_steps=158 format=2]
 
 [ext_resource path="res://data/image/char/angry/angry_30.png" type="Texture" id=1]
 [ext_resource path="res://data/image/char/stupid/512(3)_16.png" type="Texture" id=2]
@@ -89,9 +89,13 @@
 [ext_resource path="res://data/audio/click4.ogg" type="AudioStream" id=87]
 [ext_resource path="res://data/image/char/hot/512(4)_41.png" type="Texture" id=88]
 [ext_resource path="res://data/image/char/angry/angry_37.png" type="Texture" id=89]
+[ext_resource path="res://font/NotoSansSC-Medium.ttf" type="DynamicFontData" id=90]
 [ext_resource path="res://data/image/char/angry/angry_11.png" type="Texture" id=91]
 [ext_resource path="res://data/audio/cheers2.mp3" type="AudioStream" id=92]
 [ext_resource path="res://data/image/char/angry/angry_22.png" type="Texture" id=93]
+[ext_resource path="res://data/image/ui/about.png" type="Texture" id=94]
+[ext_resource path="res://data/image/ui/set.png" type="Texture" id=95]
+[ext_resource path="res://theme/slider.tres" type="Theme" id=96]
 [ext_resource path="res://data/image/char/angry/angry_15.png" type="Texture" id=120]
 [ext_resource path="res://data/image/char/angry/angry_21.png" type="Texture" id=121]
 [ext_resource path="res://data/image/char/angry/angry_32.png" type="Texture" id=126]
@@ -146,85 +150,6 @@
 [ext_resource path="res://data/image/char/hot/512(4)_30.png" type="Texture" id=220]
 [ext_resource path="res://data/image/char/hot/512(4)_36.png" type="Texture" id=221]
 
-[sub_resource type="Animation" id=7]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Control/VBoxContainer:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Control/VBoxContainer:rect_position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 664, 150 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Control/Title:rect_position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1048, 0 ) ]
-}
-
-[sub_resource type="Animation" id=8]
-resource_name = "Title"
-step = 0.05
-tracks/0/type = "value"
-tracks/0/path = NodePath("Control/VBoxContainer:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0.5, 0.85, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 663.884, 150 ), Vector2( 552, 150 ), Vector2( 592, 150 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Control/VBoxContainer:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Control/Title:rect_position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.5, 0.75, 0.9 ),
-"transitions": PoolRealArray( -2, -2, -2 ),
-"update": 0,
-"values": [ Vector2( 1048, 0 ), Vector2( 448, 0 ), Vector2( 488, 0 ) ]
-}
-
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 179 ), ExtResource( 186 ), ExtResource( 189 ), ExtResource( 159 ), ExtResource( 207 ), ExtResource( 162 ), ExtResource( 192 ), ExtResource( 166 ), ExtResource( 181 ), ExtResource( 167 ), ExtResource( 208 ), ExtResource( 187 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 145 ), ExtResource( 183 ), ExtResource( 174 ), ExtResource( 170 ), ExtResource( 172 ), ExtResource( 146 ), ExtResource( 177 ), ExtResource( 157 ), ExtResource( 147 ), ExtResource( 178 ), ExtResource( 148 ), ExtResource( 153 ), ExtResource( 182 ), ExtResource( 184 ), ExtResource( 213 ), ExtResource( 217 ), ExtResource( 220 ), ExtResource( 212 ), ExtResource( 209 ), ExtResource( 219 ), ExtResource( 218 ), ExtResource( 210 ), ExtResource( 221 ), ExtResource( 211 ), ExtResource( 214 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 88 ) ],
@@ -249,13 +174,46 @@ animations = [ {
 "speed": 60.0
 } ]
 
+[sub_resource type="DynamicFont" id=9]
+size = 32
+font_data = ExtResource( 90 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.4, 0.745098, 0.662745, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="Theme" id=11]
+Button/fonts/font = SubResource( 9 )
+Button/styles/disabled = SubResource( 10 )
+Button/styles/focus = SubResource( 10 )
+Button/styles/hover = SubResource( 10 )
+Button/styles/normal = SubResource( 10 )
+Button/styles/pressed = SubResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.176471, 0.815686, 0.27451, 1 )
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color( 0.188235, 0.411765, 0.239216, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id=13]
+Panel/styles/panel = SubResource( 12 )
+
 [node name="main" type="Node"]
 script = ExtResource( 80 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "Title"
-anims/RESET = SubResource( 7 )
-anims/Title = SubResource( 8 )
 
 [node name="backGround" type="Sprite" parent="."]
 modulate = Color( 0.858824, 0.819608, 0.819608, 1 )
@@ -266,21 +224,21 @@ texture = ExtResource( 185 )
 position = Vector2( 1112, 272 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 2 )
-frame = 3
+frame = 33
 playing = true
 
 [node name="stupid" type="AnimatedSprite" parent="."]
 position = Vector2( 1104, 160 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 4 )
-frame = 52
+frame = 36
 playing = true
 
 [node name="angry" type="AnimatedSprite" parent="."]
 position = Vector2( 1104, 56 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 6 )
-frame = 5
+frame = 40
 playing = true
 
 [node name="Tween" type="Tween" parent="."]
@@ -292,18 +250,24 @@ anchor_bottom = 1.0
 [node name="Title" type="Label" parent="Control"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = 536.0
-margin_right = 1016.0
+margin_left = -240.0
+margin_right = 240.0
 margin_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource( 83 )
 text = "黄豆人运动会"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 664.0
-margin_top = 150.0
-margin_right = 1030.0
-margin_bottom = 641.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -183.0
+margin_top = -491.0
+margin_right = 183.0
+grow_horizontal = 2
+grow_vertical = 2
 custom_constants/separation = 25
 alignment = 1
 
@@ -328,6 +292,47 @@ margin_bottom = 456.0
 theme = ExtResource( 85 )
 text = "最高分"
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -132.0
+margin_top = -222.5
+margin_right = 132.0
+margin_bottom = 264.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="punch" type="Label" parent="Control/VBoxContainer2"]
+margin_right = 264.0
+margin_bottom = 117.0
+grow_horizontal = 2
+theme = ExtResource( 83 )
+
+[node name="run" type="Label" parent="Control/VBoxContainer2"]
+margin_top = 121.0
+margin_right = 264.0
+margin_bottom = 238.0
+grow_horizontal = 2
+theme = ExtResource( 83 )
+
+[node name="pingpong" type="Label" parent="Control/VBoxContainer2"]
+margin_top = 242.0
+margin_right = 264.0
+margin_bottom = 359.0
+grow_horizontal = 2
+theme = ExtResource( 83 )
+
+[node name="score" type="Button" parent="Control/VBoxContainer2"]
+margin_top = 363.0
+margin_right = 264.0
+margin_bottom = 487.0
+theme = ExtResource( 85 )
+text = "返回"
+
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 86 )
 autoplay = true
@@ -341,6 +346,134 @@ stream = ExtResource( 92 )
 volume_db = -12.0
 autoplay = true
 
+[node name="Button" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 408.0
+margin_right = 168.0
+margin_bottom = 560.0
+theme = SubResource( 11 )
+text = "language"
+
+[node name="setting" type="TextureButton" parent="."]
+margin_left = 25.0
+margin_top = 23.0
+margin_right = 105.0
+margin_bottom = 103.0
+rect_pivot_offset = Vector2( 39, 41 )
+texture_normal = ExtResource( 95 )
+texture_pressed = ExtResource( 95 )
+texture_hover = ExtResource( 95 )
+texture_disabled = ExtResource( 95 )
+texture_focused = ExtResource( 95 )
+expand = true
+
+[node name="about" type="TextureButton" parent="."]
+margin_left = 129.0
+margin_top = 23.0
+margin_right = 209.0
+margin_bottom = 103.0
+rect_pivot_offset = Vector2( 39, 41 )
+texture_normal = ExtResource( 94 )
+texture_pressed = ExtResource( 94 )
+texture_hover = ExtResource( 94 )
+texture_disabled = ExtResource( 94 )
+texture_focused = ExtResource( 94 )
+expand = true
+
+[node name="Control2" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -200.0
+margin_right = 19.9999
+margin_bottom = -160.0
+
+[node name="Panel" type="Panel" parent="Control2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -158.0
+margin_right = 300.0
+margin_bottom = 442.0
+theme = SubResource( 13 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2"]
+margin_right = 40.0
+margin_bottom = 40.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control2/VBoxContainer"]
+margin_right = 422.0
+margin_bottom = 117.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Control2/VBoxContainer/HBoxContainer2"]
+margin_left = 4.0
+margin_right = 164.0
+margin_bottom = 117.0
+theme = ExtResource( 83 )
+text = "音量"
+
+[node name="HSlider" type="HSlider" parent="Control2/VBoxContainer/HBoxContainer2"]
+margin_left = 168.0
+margin_right = 418.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 250, 0 )
+theme = ExtResource( 96 )
+step = 0.2
+value = 100.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control2/VBoxContainer"]
+margin_top = 121.0
+margin_right = 422.0
+margin_bottom = 245.0
+grow_horizontal = 2
+custom_constants/separation = 106
+alignment = 1
+
+[node name="full" type="Button" parent="Control2/VBoxContainer/HBoxContainer"]
+margin_right = 158.0
+margin_bottom = 124.0
+theme = ExtResource( 85 )
+text = "全屏"
+
+[node name="window" type="Button" parent="Control2/VBoxContainer/HBoxContainer"]
+margin_left = 264.0
+margin_right = 422.0
+margin_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 85 )
+text = "窗口"
+
+[node name="return" type="Button" parent="Control2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -79.0
+margin_top = 227.0
+margin_right = 79.0
+margin_bottom = 351.0
+grow_horizontal = 2
+theme = ExtResource( 85 )
+text = "返回"
+
 [connection signal="pressed" from="Control/VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Score" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer2/score" to="." method="_on_score_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="about" to="." method="_on_about_pressed"]
+[connection signal="value_changed" from="Control2/VBoxContainer/HBoxContainer2/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="Control2/VBoxContainer/HBoxContainer/full" to="." method="_on_full_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/HBoxContainer/window" to="." method="_on_window_pressed"]
+[connection signal="pressed" from="Control2/return" to="." method="_on_return_pressed"]

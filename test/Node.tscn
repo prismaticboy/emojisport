@@ -1,65 +1,53 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://test/edit.gd" type="Script" id=1]
+[ext_resource path="res://data/image/char/snails/512_0.png" type="Texture" id=1]
 [ext_resource path="res://data/image/char/Slobber/512(2)_0.png" type="Texture" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://data/image/char/stupid/512(3)_0.png" type="Texture" id=3]
+[ext_resource path="res://font/NotoSansSC-Medium.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
+[sub_resource type="DynamicFont" id=1]
+size = 128
+outline_size = 2
+outline_color = Color( 0.286275, 0.388235, 0.333333, 1 )
+font_data = ExtResource( 4 )
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+[sub_resource type="Theme" id=2]
+Label/fonts/font = SubResource( 1 )
 
-[sub_resource type="TileSet" id=3]
-0/name = "icon.png 0"
-0/texture = ExtResource( 3 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 64, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 2 )
-0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 2 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="Node" type="Node"]
-script = ExtResource( 1 )
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.258824, 0.796078, 0.556863, 1 )
 
-[node name="TextEdit" type="TextEdit" parent="."]
-margin_left = 49.0
-margin_top = 16.0
-margin_right = 188.0
-margin_bottom = 78.0
-text = "12345"
-caret_blink = true
-
-[node name="512(2)0" type="Sprite" parent="."]
-position = Vector2( 553, 199 )
+[node name="512(2)0" type="Sprite" parent="ColorRect"]
+visible = false
+position = Vector2( 504, 488 )
+scale = Vector2( 0.45, 0.45 )
 texture = ExtResource( 2 )
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2( 152, 264 )
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -320.0
+margin_top = 112.0
+margin_right = 379.0
+margin_bottom = 298.0
+theme = SubResource( 2 )
+text = "emoji sport"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 1 )
+[node name="5120" type="Sprite" parent="."]
+visible = false
+position = Vector2( 432, 216 )
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+[node name="512(3)0" type="Sprite" parent="5120"]
+visible = false
+position = Vector2( 462.222, 160 )
+rotation = -0.523598
 texture = ExtResource( 3 )
-
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 3 )
-format = 1
-tile_data = PoolIntArray( 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0 )
-
-[connection signal="text_changed" from="TextEdit" to="." method="_on_TextEdit_text_changed"]
